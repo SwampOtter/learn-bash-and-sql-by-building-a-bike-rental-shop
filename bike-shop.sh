@@ -136,6 +136,7 @@ RETURN_MENU() {
       else
         # check if input is rented
         RENTAL_ID=$($PSQL "SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND bike_id = $BIKE_ID_TO_RETURN AND date_returned IS NULL")
+
         # if input not rented
         if [[ -z $RENTAL_ID ]]
         then
@@ -143,13 +144,14 @@ RETURN_MENU() {
           MAIN_MENU "You do not have that bike rented."
         else
           # update date_returned
-          RETURN_BIKE_RESULT=$($PSQL "UPDATE rentals SET date_returned = NOW() WHERE rental_id=$RENTAL_ID")
+          RETURN_BIKE_RESULT=$($PSQL "UPDATE rentals SET date_returned = NOW() WHERE rental_id = $RENTAL_ID")
+          
           # set bike availability to true
           SET_TO_TRUE_RESULT=$($PSQL "UPDATE bikes SET available = true WHERE bike_id = $BIKE_ID_TO_RETURN")
           
           # send to main menu
           MAIN_MENU "Thank you for returning your bike."
-        fi  
+        fi
       fi
     fi
   fi
