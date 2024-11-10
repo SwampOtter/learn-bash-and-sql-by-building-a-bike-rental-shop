@@ -66,3 +66,7 @@ git pull https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-ren
 git pull --no-merge https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
 git pull -r https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
 git pull -r -autostash https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull -r -autostash https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull -r --allow-unrelated-histories https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull --allow-unrelated-histories https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+__vsc_prompt_cmd_original
