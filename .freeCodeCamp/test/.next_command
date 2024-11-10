@@ -56,3 +56,13 @@ echo "$(echo ' M e ' | sed -E 's/^ *| *$//g')."
 ./bike-shop.sh
 ./bike-shop.sh
 git push --help
+git pull
+git pull --help
+git-merge
+git merge
+git merge
+git merge https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull --no-merge https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull -r https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
+git pull -r -autostash https://github.com/Swampotter/learn-bash-and-sql-by-building-a-bike-rental-shop.git
